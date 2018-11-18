@@ -1,0 +1,135 @@
+@import "fooao";
+
+body{
+  line-height: 2;
+}
+a:hover{
+  color: inherit;
+  text-shadow: 0 1px 0 #ccc, 0 1px 0 #c9c9c9, 0 3px 1px rgba(0,0,0,0.2), 0 5px 1px rgba(0,0,0,0.25);
+  text-decoration:none
+}
+//  公共样式
+.HWcenter{
+  position: absolute;
+   top: 0; 
+   left: 0; 
+   bottom: 0;
+   right: 0;
+   width: 100%; 
+   height: 100%;
+}
+.opacity-0{
+  opacity:0;
+}
+.cursor-p{
+  cursor: pointer;
+}
+pre code {
+  display: block;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin: 0 3px;
+  overflow-x: auto;
+}
+//  组件
+.header{
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.login {
+  position:relative;
+  height: 100vh;
+  display: flex;
+}
+.login-content {
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+  width: 300px;
+  margin: auto;
+  height: 360px;
+  background:RGBA(250,250,250,1);
+  box-shadow: 3px 4px 7px 0px rgba(25, 23, 23, 0.89);
+}
+// 动画
+.quiver:hover:before{
+  animation: quiver 2 0.3s;
+}
+@keyframes quiver{
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(-30deg);}
+  100% {transform: rotate(0deg);}
+}
+.m-l:nth-child(2n){animation: keym-l 1s;}
+.m-l:nth-child(2n-1){animation: keym-r 1s;}
+@keyframes keym-l
+{
+from {transform:translate(2000px);}
+to {transform:translate(0px);}
+}
+@keyframes keym-r
+{
+from {transform:translate(-2000px);}
+to {transform:translate(0px);}
+}
+//  标题图片
+.title-img{
+  position: relative;
+  min-height: 12rem;
+  width: 100%;
+  color: #b3b3b3;
+  background-color: $gray-200;
+}
+.title-img-up:before{
+  content: '\6DFB\52A0\9898\56FE';
+  color: #b3b3b3;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  bottom: 2.5rem;
+  line-height: 1;
+  opacity: 0;
+  z-index: 0;
+  font-size: 1rem;
+  transform: translateY(-1.5rem);
+  transition: all .2s;
+}
+.title-img-up:hover:before{
+  opacity: 1;
+  transform: translateY(0);
+  font-size: 1.5rem;
+}
+.title-img-del .img-del{
+  height: 5rem;
+  width: 5rem;
+  margin: auto;
+  border:2px #ccc solid;
+  border-radius: 50%;
+  line-height: 4.65rem;
+  text-align: center;
+  opacity: 0;
+}
+.title-img-del:hover .img-del{
+  opacity: 1;
+}
+.title-img-del .img-del:hover{
+  border-color: red;
+  color: red;
+}
+.page span{
+  cursor: pointer;
+}
+.page span:hover{
+  color: blue; 
+}

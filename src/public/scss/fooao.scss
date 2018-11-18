@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/*!
+  fooao 0.1
+*/
+@import "bootstrap";
+
+$white:  #fff ;
+$black:  #000 ;
+$red:    #f03 ;
+$orange: #f0ad4e ;
+$yellow: #f90 ;
+$green:  #093 ;
+$blue:   #09c ;
+$teal:   #5bc0de ;
+$pink:   #f9c ;
+$purple: #613d7c ;
+
+
+.border          {border: 1px solid currentColor}
+.border-top      {border-top:1px solid currentColor}
+.border-right    {border-right:1px solid currentColor}
+.border-bottomt  {border-bottom:1px solid currentColor}
+.border-left     {border-left:1px solid currentColor}
+
+@import "font-icon";

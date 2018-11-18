@@ -1,0 +1,40 @@
+.login {
+    position:relative;
+    overflow:hidden;
+    height: 100vh;
+    display: flex;
+}
+.login::before {
+    background: url("./public/image/loginbj.jpg") 0 / cover;
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    filter: blur(5px);
+    z-index: -1;
+    margin: -10px;
+}
+.login-logo {
+    animation: login-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.login-header {
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    height: 360px;
+    background:RGBA(250,250,250,0.5);
+}
+.from-x{
+    text-align:left;
+}
+.login-intro {
+    font-size: large;
+}
+
+@keyframes login-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
